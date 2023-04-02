@@ -1,7 +1,82 @@
-<p>login-page works!</p>
 
-<form action="/home" class="form-style">
-    <label for="username">Username: <br><input type="text" name="username" required/></label> <br>
-    <label for="password">Password: <br><input type="password" name="password" required /></label> <br>
-    <button type="submit">Login</button>
-  </form>
+<style>
+
+  .logo {
+    position:fixed;
+    top:1em;
+    left:1em;
+  }
+  .orange-rectangle {
+    position:fixed;
+    left:0;
+    bottom:0;
+  }
+
+  .navy-rectangle {
+    position:fixed;
+    right:0;
+    top:0;
+  }
+
+  img {
+    pointer-events:none;
+  }
+
+  body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+  }
+ 
+  .forgot-password {
+    float:right;
+
+  }
+
+  .buttons-1 {
+    display:flex;
+    justify-content: space-between;
+    margin:auto;
+  }
+  
+  .form-style {
+    margin-top: 15%;
+  }
+
+  a {
+    color:#7F7F7F;
+  }
+
+  a:hover {
+    color:#EB9500;
+  }
+  label {
+    font-weight:bold;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  </style>
+
+
+<body>
+  <img class="logo" src="../../assets/locafy-full-logo.png">
+  <div class="form-style">
+    <img class="orange-rectangle" src="../../assets/orange-rectangle.png">
+    <img class="navy-rectangle" src="../../assets/navy-rectangle.png">
+    <form action="/register" class="form-style">
+      <div><label for="username">Username: <br><input type="text" placeholder="Enter Username" name="username" required/></label> </div><br>
+      <div><label for="password">Password: <br><input type="password" placeholder="Enter Password" name="password" required /></label></div>
+      <div class="forgot-password"><a href="#">forgot password?</a></div><br>
+      <br>
+      <div class="buttons-1">
+        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-primary">Sign up</button>
+      </div>
+      
+    </form>
+  </div>
+</body>
